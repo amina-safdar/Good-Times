@@ -1,0 +1,372 @@
+:root {
+  --orange: #ff3c15;
+}
+
+body {
+  background-image: url(background.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+   /* Height must be auto so image is not distorted at fixed height */
+  background-size: 100% auto;
+  color: #414141;
+  font-family: 'HK-Grotesk-Medium', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+a {
+  color: #414141;
+  text-decoration: none;
+}
+
+.heading {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 3px;
+  color: #fff;
+  font-family: 'HK-Grotesk-Bold';
+  font-size: 110px;
+  line-height: 1;
+}
+
+.heading-orange {
+  -webkit-text-stroke-color: var(--orange);
+  color: var(--orange);
+  font-size: 120px;
+  margin-bottom: 3rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+blockquote {
+  color: var(--orange);
+  font-size: 36px;
+}
+
+.cite {
+  border-radius: 100%;
+  border: solid 3px var(--orange);
+  color: var(--orange);
+  display: inline-block;
+  line-height: 1;
+  padding: 24px 18px;
+}
+
+.header-desktop {
+  left: 0;
+  position: fixed;
+  top: 0;
+   /* Hide from page */
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+/* Header */ 
+.logo-container {
+  width: 100%;
+}
+
+.logo-svg {
+  height: 72px;
+  width: 236px;
+}
+
+.logo-svg path,
+/* Polygon "T" is less code than path "T" */
+.logo-svg polygon {
+  fill: #fff;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.button {
+  background-color: var(--orange);
+  border: none;
+  color: #fff;
+  display: inline-block;
+  font-family: 'HK-Grotesk-Bold';
+  letter-spacing: 0.05em;
+  padding: 24px 72px;
+  text-transform: uppercase;
+}
+
+.header-desktop {
+  background-color: #fff;
+  box-shadow: 0 0 4px 0px rgba(65, 65, 65, 0.5);
+  padding: 20px;
+  z-index: 4;
+}
+
+.header-desktop.visible {
+  transform: translateY(0);
+}
+
+.header-desktop .nav-list {
+  align-items: center;
+}
+
+.header-desktop .logo-container {
+  margin-bottom: 0;
+  margin-right: auto;
+  width: auto;
+}
+
+.header-desktop .nav-item:last-of-type .nav-link {
+  color: var(--orange);
+}
+
+.header-desktop .nav-link {
+  color: #414141;
+}
+
+.header-desktop .logo-svg {
+  height: 40px;
+  width: 131px;
+}
+
+.header-desktop .logo-svg path,
+.header-desktop .logo-svg polygon {
+  fill: #414141;
+}
+
+@media (max-width: 800px) {
+  .header-desktop {
+    display: none !important;
+  }
+  .nav-item {
+    font-size: 14px;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .logo-svg {
+    height: 40px;
+    width: 131px;
+  }
+}
+
+/* Schedule */
+.schedule-container {
+  border: solid 3px var(--orange);
+  /* Gives us natural scrolling behaviour on touch screens */
+  -webkit-overflow-scrolling: touch;
+}
+
+.schedule-container::-webkit-scrollbar {
+  background-color: transparent;
+  height: 14px;
+  width: 12px;
+}
+
+.schedule-container::-webkit-scrollbar {
+  background-color: transparent;
+  height: 14px;
+  width: 12px;
+}
+
+.schedule-container::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+  border: solid 2px #fff;
+}
+
+.schedule {
+  padding: 48px 24px;
+}
+
+.schedule-time {
+  color: var(--orange);
+  font-family: 'HK-Grotesk-Bold', sans-serif;
+  font-size: 36px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.vertical {
+  background-color: var(--orange);
+  color: #fff;
+  line-height: 1;
+  padding: 24px;
+  text-align: center;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+}
+
+/* Registration form */
+.register-image {
+  background-color: ;
+  background-image: url(location.jpg);
+  background-position: center bottom;
+}
+
+input {
+  border: none;
+  color: #32325d;
+  font-size: 1rem;
+  height: 48px;
+  line-height: 1.5;
+  outline: none;
+  padding: 0 12px;
+  width: 100%;
+}
+
+input::placeholder {
+  color: #aab7c4;
+}
+
+.bg-orange {
+  background-color: #ffe6dd;
+}
+
+.register {
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+}
+
+.front,
+.back {
+  grid-area: 1/1;
+}
+
+.front {
+  transition: transform 0.5s ease;
+}
+
+.front.slide-up {
+  transform: translateY(-100%);
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+.button-small {
+  font-size: 14px;
+  padding: 12px 20px;
+}
+
+.button-outline {
+  background-color: transparent;
+  border: solid 2px var(--orange);
+  color: var(--orange);
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.StripeElement {
+  background-color: #fff;
+  padding: 12px;
+}
+
+/* Lock the form when it's submitting */
+.form-fields {
+  opacity: ;
+  transition: opacity 0.5s ease;
+}
+
+.processing .form-fields {
+  opacity: 0.5;
+  /* Disables interaction with form during submission */
+  pointer-events: none;
+}
+
+.spinner {
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+  background-color: var(--orange);
+  box-shadow: 0 0 12px 0 rgb(254 145 127);
+  height: 40px;
+  left: 50%;
+  margin-left: -20px;
+  margin-right: -20px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transition: opacity 0.5s ease;
+  width: 40px;
+  z-index: 10;
+}
+
+/* Show the spinner as the form processes */
+.processing .spinner {
+  opacity: 1;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+}
+
+.footer-link {
+  width: 131px;
+  height: 40px;
+  background-image: url('logo.svg');
+}
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    background-size: auto 120vh;
+    font-size: 16px;
+  }
+
+  .heading {
+    -webkit-text-stroke-width: 3px;
+    font-size: 72px;
+  }
+
+  .button {
+    padding: 18px 32px;
+  }
+
+  .heading-orange {
+    margin-bottom: 24px;
+  }
+  blockquote {
+    line-height: 1.2;
+  }
+
+  .schedule-day {
+    padding: 12px;
+  }
+}
+
+  @media (max-width: 400px) {
+    .heading {
+      -webkit-text-stroke-width: 1px;
+      font-size: 48px;
+    }
+  }
+
